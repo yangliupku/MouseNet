@@ -5,7 +5,6 @@ This package will allow you to run MouseNet to track the body parts of mouse via
 ## Prerequisites
 
 **(1)** Install Docker. See https://docs.docker.com/install/ & for Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
-
 ## Starting the docker container
 In the terminal start your container with the following command
 ```
@@ -36,4 +35,15 @@ If sucessful, you should see output like
 Congrates! You're good to track your mouse. See the jupyter notebook for some examples. 
 
 ## Running on GPU: 
-coming soon.
+Install nvidia-driver and nvidia-docker follow the instructions [here](https://github.com/NVIDIA/nvidia-docker#quick-start)
+In the terminal start your container with the following command
+```
+docker run --runtime=nvidia  -p 8501:8501  -e MODEL_NAME=dlc -t yangliupku/mousenet-gpu
+```
+If successful, you should see a message with something like
+```
+......
+[evhttp_server.cc : 237] RAW: Entering the event loop ...
+2019-01-16 04:42:43.148141: I tensorflow_serving/model_servers/server.cc:302] Exporting HTTP/REST API at:localhost:8501 ...
+```
+
