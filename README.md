@@ -9,7 +9,7 @@ This package will allow you to run MouseNet to track the body parts of mouse via
 ## Starting the docker container
 In the terminal start your container with the following command
 ```
-docker run -p 8501:8501  -e MODEL_NAME=dlc -t yangliupku/mouse_tracker
+docker run -p 8501:8501  -e MODEL_NAME=dlc -t yangliupku/mousenet
 ```
 If sucessful, you should see output like 
 ```
